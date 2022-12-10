@@ -25,6 +25,11 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    font-size: $base*3;
+    font-weight: bold;
+}
+
 mark {
     color: $white;
     background-color: $pink;
@@ -32,8 +37,13 @@ mark {
 }
 
 a, a:hover {
-    color: $pink;
+    color: $pink !important;
     text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
 }
 
 .menu {
@@ -97,4 +107,78 @@ a, a:hover {
     height: 120%;
     z-index: -999;
     background-color: $blue;
+}
+
+.about {
+    margin-top: $base*32;
+
+    h1 {
+        color: $purple;
+
+        span {
+            text-decoration: underline;
+        }
+    }
+}
+
+.skills {    
+    ul li::before {
+        content: "\2606";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: $pink; /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1.15em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+}
+
+.experiences {
+    li {
+        padding: $base 0 $base $base*2;
+        border-left: 1px solid $grey;
+        color: $grey;
+    }
+
+    .active {
+        border-left: 1px solid $pink;
+        color: $pink;
+    }
+
+    .exp {
+        margin-left: $base*3;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        .exp-time {
+            color: $grey;
+        }
+    }
+}
+
+footer {
+    margin-top: $base*11;
+    border-top: 1px solid $blue;
+    color: $blue;
+
+    .d-flex {
+        padding: $base*4 0 $base*2 0;
+    }
+
+    .socials {
+        font-size: $base*3;
+
+        a {
+            color: $blue !important;
+            margin-right: $base;
+        }
+    }
+
+    .quotes {
+        position: absolute;
+        right: $base*20;
+        color: $grey !important;
+        padding: $base*4 0 $base*8 0;
+    }
 }

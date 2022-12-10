@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -11,6 +12,11 @@ h1 {
   font-weight: bold;
 }
 
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 mark {
   color: #FFF;
   background-color: #F72585;
@@ -18,8 +24,13 @@ mark {
 }
 
 a, a:hover {
-  color: #F72585;
+  color: #F72585 !important;
   text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
 }
 
 .menu {
@@ -84,6 +95,66 @@ a, a:hover {
   height: 120%;
   z-index: -999;
   background-color: #4CC9F0;
+}
+
+.about {
+  margin-top: 256px;
+}
+.about h1 {
+  color: #7209B7;
+}
+.about h1 span {
+  text-decoration: underline;
+}
+
+.skills ul li::before {
+  content: "☆"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #F72585; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1.15em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.experiences li {
+  padding: 8px 0 8px 16px;
+  border-left: 1px solid #CCC5B9;
+  color: #CCC5B9;
+}
+.experiences .active {
+  border-left: 1px solid #F72585;
+  color: #F72585;
+}
+.experiences .exp {
+  margin-left: 24px;
+}
+.experiences .exp h2 {
+  margin-bottom: 0;
+}
+.experiences .exp .exp-time {
+  color: #CCC5B9;
+}
+
+footer {
+  margin-top: 88px;
+  border-top: 1px solid #4CC9F0;
+  color: #4CC9F0;
+}
+footer .d-flex {
+  padding: 32px 0 16px 0;
+}
+footer .socials {
+  font-size: 24px;
+}
+footer .socials a {
+  color: #4CC9F0 !important;
+  margin-right: 8px;
+}
+footer .quotes {
+  position: absolute;
+  right: 160px;
+  color: #CCC5B9 !important;
+  padding: 32px 0 64px 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
