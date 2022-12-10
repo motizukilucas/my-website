@@ -102,6 +102,7 @@ ul {
 }
 .about h1 {
   color: #7209B7;
+  text-align: center;
 }
 .about h1 span {
   text-decoration: underline;
