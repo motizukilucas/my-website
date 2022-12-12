@@ -100,6 +100,9 @@ ul {
 .about {
   margin-top: 256px;
 }
+.about .m-auto {
+  margin-top: 0 !important;
+}
 .about h1 {
   color: #7209B7;
   text-align: center;
@@ -197,7 +200,9 @@ ul {
   color: #000;
 }
 .projects .project img {
-  max-width: 384px;
+  max-width: 320px;
+  display: block;
+  margin: auto;
 }
 .projects .project .techs {
   color: #7209B7;
