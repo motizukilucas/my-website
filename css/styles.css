@@ -1,4 +1,14 @@
 @charset "UTF-8";
+@media screen and (min-width: 1920px) {
+  .bg-purple {
+    width: 65.5% !important;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .bg-purple {
+    width: 70.5% !important;
+  }
+}
 body {
   font-family: "Open Sans", sans-serif;
 }

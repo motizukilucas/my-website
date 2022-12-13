@@ -7,9 +7,24 @@ $grey: #CCC5B9;
 
 $base: 8px;
 
+$xl: 1920px;
+$xxl: 2000px;
+
 @mixin bg {
     position: absolute;
     top: 0;
+}
+
+@media screen and (min-width: $xl) {
+    .bg-purple {
+        width: 65.5% !important;
+    }
+}
+
+@media screen and (min-width: $xxl) {
+    .bg-purple {
+        width: 70.5% !important;
+    }
 }
 
 body {
