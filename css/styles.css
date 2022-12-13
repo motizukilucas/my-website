@@ -76,6 +76,7 @@ ul {
 
 .hero-img {
   max-width: 256px;
+  box-shadow: 8px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero-img-border {
@@ -215,7 +216,7 @@ ul {
   margin: auto;
 }
 .projects .project .techs {
-  color: #7209B7;
+  color: #CCC5B9;
   text-align: right;
 }
 

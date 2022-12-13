@@ -95,6 +95,7 @@ ul {
 
 .hero-img {
     max-width: $base*32;
+    box-shadow: $base $base rgba($color: #000, $alpha: 0.1);
 }
 
 .hero-img-border {
@@ -255,7 +256,7 @@ ul {
         }
 
         .techs {
-            color: $purple;
+            color: $grey;
             text-align: right;
         }
     }
