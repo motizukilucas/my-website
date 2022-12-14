@@ -68,6 +68,22 @@ ul {
     list-style: none; /* Remove default bullets */
 }
 
+.blackout {
+    height: 100%;
+    width: 100%;
+    background-color: $black;
+    z-index: 999;
+    position: absolute;
+    opacity: 0;
+
+    /* Fade-in Animation */
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+     -ms-animation: fadein 1s; /* Internet Explorer */
+      -o-animation: fadein 1s; /* Opera < 12.1 */
+         animation: fadein 1s;
+}
+
 .menu {
     background-color: transparent;
     border-color: transparent;
@@ -318,4 +334,34 @@ footer {
         color: $grey !important;
         padding: $base*4 0 $base*8 0;
     }
+}
+
+/* Animation Keyframes */
+@keyframes fadein {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 1; }
+    to   { opacity: 0; }
 }
