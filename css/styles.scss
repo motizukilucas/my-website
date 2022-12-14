@@ -7,12 +7,19 @@ $grey: #CCC5B9;
 
 $base: 8px;
 
+$md: 768px;
 $xl: 1920px;
 $xxl: 2000px;
 
 @mixin bg {
     position: absolute;
     top: 0;
+}
+
+@media screen and (min-width: $md) {
+    .experiences {
+        width: 640px !important;
+    }
 }
 
 @media screen and (min-width: $xl) {

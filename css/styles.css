@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@media screen and (min-width: 768px) {
+  .experiences {
+    width: 640px !important;
+  }
+}
 @media screen and (min-width: 1920px) {
   .bg-purple {
     width: 65.5% !important;
