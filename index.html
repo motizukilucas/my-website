@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.2.slim.min.js" integrity="sha256-E3P3OaTZH+HlEM7f1gdAT3lHAn4nWBZXuYe89DFg2d0=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/b1a4800946.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -64,65 +65,52 @@
                 <h1># <span>Experiences</span></h1>
                 <div class="d-flex">
                     <ul>
-                        <li class="active">Aubay</li>
-                        <li>EzOps.cloud</li>
-                        <li>Bilo</li>
-                        <li>Ilumno</li>
+                        <li><button id="exp-ab" class="active">Aubay</button></li>
+                        <li><button id="exp-ez">EzOps.cloud</button></li>
+                        <li><button id="exp-bi">Bilo</button></li>
+                        <li><button id="exp-il">Ilumno</button></li>
                     </ul>
-                    <div class="exp" style="display: none;">
+                    <div class="exp exp-ab">
                         <h2>Devops Engineer <a href="https://www.aubay.pt/" target="_blank">@ Aubay</a></h2>
                         <p class="exp-time">Sep 2022 &mdash; Present</p>
                         <p class="exp-desc">
-                            Manage and create infra as code on public clouds, build and<br>
-                            deploy multi-environment pipelines, on-premises clusters,<br>
-                            for a diverse array of internal projects.<br><br>
-                            Work with a variety of different languages, platforms, frameworks,<br>
-                            and operational systems such as Gitlab-ci, Terraform, Ansible, Azure,<br>
-                            OCI, Docker, Kubernetes, Bash, Python and JavaScript.<br><br>
-                            Communicate with multi-disciplinary teams of engineers, designers,<br>
-                            stakeholders, and clients on a daily basis.
+                            Manage and create infra as code on public clouds, build and deploy multi-environment pipelines, on premises clusters, for a diverse array of internal projects.<br><br>
+                            Work with a variety of different languages, platforms, frameworks, and operational systems such as Gitlab-ci, Terraform, Ansible, Azure, OCI, Docker, Kubernetes, Bash, Python and JavaScript.<br><br>
+                            Communicate with multi-disciplinary teams of engineers, designers, stakeholders, and clients on a daily basis.
                         </p>
                     </div>
-                    <div class="exp" style="display: none;">
+                    <div class="exp exp-ez d-none">
                         <h2>Devops Engineer <a href="https://www.ezops.cloud/" target="_blank">@ EzOps.cloud</a></h2>
                         <p class="exp-time">Feb 2021 &mdash; Sep 2022</p>
                         <p class="exp-desc">
-                            Automation of software development based on DevOps techniques,<br>
-                            focused in public cloud, with the occasional on-premises sysadmin role.<br><br>
-                            Responsible for gathering costumer needs, planing, building and managing.<br>
-                            the architeture. Daily contact with several worldwide clients.<br><br>
-                            Technologies used: AWS, Azure, GCP and OCI stacks. Terraform and<br>
-                            cloudformation. Docker and Kubernetes. Python, Bash, PHP and JavaScript.
+                            Automation of software development based on DevOps techniques, focused in public cloud, with the occasional on premises sysadmin role.<br><br>
+                            Responsible for gathering costumer needs, planing, building and managing the architeture. Daily contact with several worldwide clients.<br><br>
+                            Technologies used: Terraform, Cloudformation, Docker,  K8S. Python, Bash, PHP, JavaScript, AWS, Azure, GCP and OCI stacks.
                         </p>
                     </div>
-                    <div class="exp" style="display: none;">
-                        <h2>Fullstack Developer <a href="#" target="_blank">@ Bilo</a></h2>
+                    <div class="exp exp-bi d-none">
+                        <h2>Full Stack Developer <a href="#" target="_blank">@ Bilo</a></h2>
                         <p class="exp-time">Aug 2018 &mdash; Feb 2020</p>
                         <p class="exp-desc">
                             Highly adaptable to the needs of a start-up rapid expansion.<br><br>
-                            Desiging and development of full stack web based applications.<br>
-                            TDD driven development, creating an array of functional automated tests.<br><br>
-                            Work with different kinds of technologies, such as programming languages,<br>
-                            and frameworks, including Laravel, Rails, Rspec, PHPUnit, JavaScript, SCSS,<br>
-                            HTML, Docker, AWS, and Agile methodologies. 
+                            Desiging and development of full stack web based applications. TDD driven development, creating an array of functional automated tests.<br><br>
+                            Work with different kinds of technologies, such as programming languages, and frameworks, including Laravel, Rails, Rspec, PHPUnit, JavaScript, SCSS, HTML, Docker, AWS, and Agile methodologies. 
                         </p>
                     </div>
-                    <div class="exp">
-                        <h2>R&D Intern <a href="https://www.ilumno.com" target="_blank">@ Ilumno</a></h2>
+                    <div class="exp  exp-il d-none">
+                        <h2>Software Engineer Intern <a href="https://www.ilumno.com" target="_blank">@ Ilumno</a></h2>
                         <p class="exp-time">Aug 2017 &mdash; Jul 2018</p>
                         <p class="exp-desc">
                             Present in more than 10 countries over Latin America.<br><br>
-                            Collaborated in it's learning style research and web application<br>
-                            development, aimed at over 5 thousand students at the time.<br><br>
-                            Direct in person support and feedback dather, communicating with<br>
-                            international teachers, developers, students and stakeholders.
+                            Collaborated in it's learning style research and web application development, aimed at over 5 thousand students at the time.<br><br>
+                            Direct in person support and feedback dather, communicating with international teachers, developers, students and stakeholders.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="button m-auto">
-            <a>Resumé</a>
+            <a href="file:///Users/motizukilucas/Desktop/projects/my-website/resume-lucas-motizuki.pdf" target="_blank">Resumé</a>
         </div>
     </section>
     <section class="projects">
@@ -132,31 +120,19 @@
             <div class="d-flex project-wrapper">
                 <div class="project">
                     <a href="#"><h2>Harry Potter Scraper <i class="fa-solid fa-arrow-up-from-bracket"></i></h2></a>
-                    <p>
-                        I’ve been working with technology for more than<br>
-                        five years now, collaborating with all the kinds of<br>
-                        companies, including a start-up and a big corporation. 
-                    </p>
+                    <p>I’ve been working with technology for more than five years now, collaborating with all the kinds of companies, including a start-up and a big corporation.</p>
                     <img src="img/food.svg">
                     <p class="techs">python gitlab-ci</p>
                 </div>
                 <div class="project">
                     <a href="#"><h2>Harry Potter Scraper <i class="fa-solid fa-arrow-up-from-bracket"></i></h2></a>
-                    <p>
-                        I’ve been working with technology for more than<br>
-                        five years now, collaborating with all the kinds of<br>
-                        companies, including a start-up and a big corporation. 
-                    </p>
+                    <p>I’ve been working with technology for more than five years now, collaborating with all the kinds of companies, including a start-up and a big corporation.</p>
                     <img src="img/food.svg">
                     <p class="techs">python gitlab-ci</p>
                 </div>
                 <div class="project">
                     <a href="#"><h2>Harry Potter Scraper <i class="fa-solid fa-arrow-up-from-bracket"></i></h2></a>
-                    <p>
-                        I’ve been working with technology for more than<br>
-                        five years now, collaborating with all the kinds of<br>
-                        companies, including a start-up and a big corporation. 
-                    </p>
+                    <p>I’ve been working with technology for more than five years now, collaborating with all the kinds of companies, including a start-up and a big corporation.</p>
                     <img src="img/food.svg">
                     <p class="techs">python gitlab-ci</p>
                 </div>
@@ -194,5 +170,6 @@
             &mdash; The Minimalists
         </p>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>
