@@ -9,11 +9,10 @@ services:
       - 443:443
     restart: always
     volumes:
-      - ./certbot/www:/var/www/certbot/:ro
-      - ./certbot/conf/:/etc/nginx/ssl/:ro
+      - ./certbot/conf/:/etc/letsencrypt/live/motizuki.me/:ro
   certbot:
     platform: linux/x86_64
     image: certbot/certbot:latest
     volumes:
-      - ./certbot/www/:/var/www/certbot/:rw
-      - ./certbot/conf/:/etc/letsencrypt/:rw
+      - ./certbot/conf/:/etc/letsencrypt/live/motizuki.me/:rw
+      

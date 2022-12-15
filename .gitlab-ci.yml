@@ -23,7 +23,8 @@ build&deploy:
     - chmod 400 deploy.pem
   script:
     - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST "cd my-website && git pull"
-    - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST 'cd my-website && docker-compose down || true'
-    - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST 'cd my-website && docker-compose rm || true'
+    - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST 'docker kill $(docker ps -aq) || true'
+    - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST 'docker rm $(docker ps -aq) || true'
+    - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST 'docker rmi $(docker images -aq) || true'
     - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST 'cd my-website && docker-compose up --build -d'
    
