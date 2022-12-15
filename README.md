@@ -13,7 +13,7 @@ variables
 - [x] load animation
 - [x] experience transition animation
 - [x] PDF link
-- deployment
+- [x] deployment
 - https
 - menu
 - clean up animations like BC
