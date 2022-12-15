@@ -14,5 +14,4 @@ services:
     platform: linux/x86_64
     image: certbot/certbot:latest
     volumes:
-      - ./certbot/conf/:/etc/letsencrypt/live/motizuki.me/:rw
-      
+      - ./certbot/conf/:/etc/letsencrypt/archive/motizuki.me/:rw
