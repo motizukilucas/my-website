@@ -14,6 +14,7 @@ variables
 - [x] experience transition animation
 - [x] PDF link
 - deployment
+- https
 - menu
 - clean up animations like BC
 - mobile
