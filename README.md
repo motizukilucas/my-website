@@ -14,11 +14,9 @@ variables
 - [x] experience transition animation
 - [x] PDF link
 - [x] deployment
-- https
-docker-compose run --rm certbot -d motizuki.me --manual --preferred-challenges dns certonly
-https://serverfault.com/questions/750902/how-to-use-lets-encrypt-dns-challenge-validation
-https://mindsers.blog/post/https-using-nginx-certbot-docker/
-https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/
+- [x] https
+- SEO
+- content update
 - menu
 - clean up animations like BC
 - mobile
