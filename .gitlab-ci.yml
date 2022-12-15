@@ -26,5 +26,5 @@ build&deploy:
     - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST 'docker kill $(docker ps -aq) || true'
     - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST 'docker rm $(docker ps -aq) || true'
     - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST 'docker rmi $(docker images -aq) || true'
-    - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST "cd my-website && docker build --no-cache . -t my-website && docker run -d -p 80:80 -v ~/my-website:/var/www/my-website my-website -v /etc/letsencrypt/live/motizuki.me:/etc/letsencrypt/live/motizuki.me"
+    - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST "cd my-website && docker build --no-cache . -t my-website && docker run -d -p 80:80 -v ~/my-website:/var/www/my-website -v /etc/letsencrypt/live/motizuki.me:/etc/letsencrypt/live/motizuki.me my-website"
 
