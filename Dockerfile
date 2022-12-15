@@ -4,9 +4,8 @@ WORKDIR /var/www/my-website
 
 COPY . .
 
-RUN cp nginx.conf /etc/nginx/conf.d/default.conf && \
-    mkdir -p /etc/letsencrypt/live/motizuki.me
+RUN cp nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+EXPOSE 80 443
 
 CMD nginx -g "daemon off;"
