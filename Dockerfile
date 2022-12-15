@@ -4,11 +4,8 @@ WORKDIR /var/www/my-website
 
 COPY . .
 
-COPY /etc/letsencrypt/live/motizuki.me/fullchain.pem fullchain.pem
-COPY /etc/letsencrypt/live/motizuki.me/privkey.pem privkey.pem
-
 RUN cp nginx.conf /etc/nginx/conf.d/default.conf && \
-    mkdir /etc/letsencrypt/live/motizuki.me &&  cp fullchain.pem /etc/letsencrypt/live/motizuki.me/fullchain.pem && cp privkey.pem /etc/letsencrypt/live/motizuki.me/privkey.pem
+    mkdir /etc/letsencrypt/live/motizuki.me/
 
 EXPOSE 80
 
