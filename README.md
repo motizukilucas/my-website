@@ -15,9 +15,9 @@ variables
 - [x] PDF link
 - [x] deployment
 - [x] https
-- SEO
-- content update
-- menu
+- [x] SEO
+- [x] content update
 - clean up animations like BC
+- menu
 - mobile
-- more projects
+- display actual projects
