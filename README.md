@@ -19,7 +19,7 @@ variables
 - [x] content update
 - [x] fade animation
 - [x] button hover
-- link underline hover
+- [x] link underline hover
 - experiences animation clean up
 - page loading animation
 - menu
