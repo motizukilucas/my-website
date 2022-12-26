@@ -20,5 +20,31 @@ $(document).ready(function(){
         $('.exp').addClass('d-none');
         $('.exp-il').removeClass('d-none');
     });
+
+    var $animationElements = $('.animation-element');
+    var $window = $(window);
+
+    var isMobile = window.matchMedia("only screen and (max-width: 768px)");
+    if (isMobile.matches) {
+        $animationElements.removeClass('animation-element');
+    }
+
+    function checkIfInView() {
+        var windowHeight = $window.height();
+        var windowTopPosition = $window.scrollTop();
+        var windowBottomPosition = (windowTopPosition + windowHeight);
+
+        $.each($animationElements, function () {
+            var $element = $(this);
+            var elementHeight = $element.outerHeight();
+            var elementTopPosition = $element.offset().top;
+            var elementBottomPosition = (elementTopPosition + elementHeight);
+
+            if ((elementBottomPosition >= windowTopPosition) && (elementTopPosition <= windowBottomPosition)) { $element.addClass('in-view'); } 
+        });
+    }
+
+    $window.on('scroll resize', checkIfInView);
+    $window.trigger('scroll');
 });
   

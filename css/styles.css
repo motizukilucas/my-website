@@ -17,11 +17,6 @@
 body {
   font-family: "Open Sans", sans-serif;
   /* Fade-in Animation */
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
 }
 
 p {
@@ -276,8 +271,12 @@ footer .quotes {
   padding: 32px 0 64px 0;
 }
 
-/* Animation Keyframes */
-@keyframes fadein {
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -285,41 +284,100 @@ footer .quotes {
     opacity: 1;
   }
 }
-/* Firefox < 16 */
-@-moz-keyframes fadein {
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeInDown {
   from {
     opacity: 0;
+    transform: translate3d(0, -100%, 0);
   }
   to {
     opacity: 1;
+    transform: none;
   }
 }
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+@keyframes fadeInUp {
   from {
     opacity: 0;
+    transform: translate3d(0, 20px, 0);
   }
   to {
     opacity: 1;
+    transform: none;
   }
 }
-/* Internet Explorer */
-@-ms-keyframes fadein {
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInUpBig {
   from {
     opacity: 0;
+    transform: translate3d(0, 100px, 0);
   }
   to {
     opacity: 1;
+    transform: none;
   }
 }
-/* Opera < 12.1 */
-@-o-keyframes fadein {
+.fadeInUpBig {
+  animation-name: fadeInUpBig;
+}
+
+@keyframes fadeInLeft {
   from {
     opacity: 0;
+    transform: translate3d(-30px, 0, 0) rotateZ(30deg);
   }
   to {
     opacity: 1;
+    transform: none;
   }
+}
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeInLeftBig {
+  from {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInLeftBig {
+  animation-name: fadeInLeftBig;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.animation-element.in-view {
+  animation: fadeInUp;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
 }
 
 /*# sourceMappingURL=styles.css.map */

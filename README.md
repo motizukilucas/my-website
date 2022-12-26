@@ -17,7 +17,10 @@ variables
 - [x] https
 - [x] SEO
 - [x] content update
-- clean up animations like BC
+- [x] fade animation
+- button hover animation
+- experiences animation clean up
+- page loading animation
 - menu
 - mobile
 - display actual projects
