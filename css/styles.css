@@ -133,6 +133,14 @@ ul {
   padding: 16px;
   border: 1px solid #F72585;
 }
+.about .button:hover {
+  background-color: #F72585;
+  color: #FFF !important;
+}
+.about .button:hover a:hover {
+  background-color: #F72585 !important;
+  color: #FFF !important;
+}
 
 .skills ul li::before {
   content: "☆"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
@@ -197,6 +205,15 @@ ul {
   border: 1px solid #FFF;
   color: #FFF !important;
 }
+.projects .button:hover {
+  background-color: #4CC9F0;
+  color: #FFF !important;
+}
+.projects .button:hover a:hover {
+  background-color: #4CC9F0 !important;
+  color: #FFF !important;
+  border-color: #4CC9F0 !important;
+}
 .projects .project-wrapper {
   margin: 64px 0 64px 0;
 }
@@ -247,6 +264,15 @@ ul {
 .contact .button a {
   padding: 16px;
   border: 1px solid #F72585;
+}
+.contact .button:hover {
+  background-color: #F72585;
+  color: #FFF !important;
+}
+.contact .button:hover a:hover {
+  background-color: #F72585 !important;
+  color: #FFF !important;
+  border-color: #F72585 !important;
 }
 
 footer {

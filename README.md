@@ -18,7 +18,8 @@ variables
 - [x] SEO
 - [x] content update
 - [x] fade animation
-- button hover animation
+- [x] button hover
+- link underline hover
 - experiences animation clean up
 - page loading animation
 - menu

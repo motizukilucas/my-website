@@ -166,6 +166,15 @@ ul {
             border: 1px solid $pink;
         }
     }
+
+    .button:hover  {
+        background-color: $pink;
+        color: $white !important;
+        a:hover {
+            background-color: $pink !important;
+            color: $white !important;
+        }
+    }
 }
 
 .skills {    
@@ -245,6 +254,16 @@ ul {
         }
     }
 
+    .button:hover  {
+        background-color: $blue;
+        color: $white !important;
+        a:hover {
+            background-color: $blue !important;
+            color: $white !important;
+            border-color: $blue !important;
+        }
+    }
+
     .project-wrapper {
         margin: $base*8 0 $base*8 0;
     }
@@ -305,6 +324,16 @@ ul {
         a {
             padding: $base*2;
             border: 1px solid $pink;
+        }
+    }
+
+    .button:hover  {
+        background-color: $pink;
+        color: $white !important;
+        a:hover {
+            background-color: $pink !important;
+            color: $white !important;
+            border-color: $pink !important;
         }
     }
 }
