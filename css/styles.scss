@@ -72,6 +72,78 @@ ul {
     list-style: none; /* Remove default bullets */
 }
 
+.nav {
+    font-weight: 300 !important;
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    margin: $base*4 0 0 $base*8;
+    padding: $base*3;
+    background-color: rgba($color: $black, $alpha: 0.1);
+    border: 1px solid $black;
+
+    button {
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+        cursor: pointer;
+        width: fit-content;
+        position: relative;
+        left: -$base;
+        top: -$base*4;
+        height: $base*6;
+        width: $base*6;
+        margin-bottom: $base;
+    }
+
+    button:after {
+        content: '';
+        height: $base*6;
+        border-left: 2px solid $white;
+        position: absolute;
+        transform: rotate(45deg);
+        left: 28px;
+    }
+    
+    button:before {
+        content: '';
+        height: $base*6;
+        border-left: 2px solid $white;
+        position: absolute;
+        transform: rotate(-45deg);
+        left: 28px;
+    }
+
+    h2 {
+        font-weight: 300 !important;
+        color: $white;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    .nav-menu {
+        li {
+            margin-bottom: $base;
+            a {
+                padding: $base;
+            }
+        }
+    }
+
+    .nav-socials {
+        li {
+            display: inline-block;
+            margin: $base;
+            a {
+                padding: $base;
+            }
+        }
+    }
+}
+
 .bg-purple {
     @include bg;
     width: 70.5%;
@@ -90,9 +162,10 @@ ul {
 }
 
 .menu {
+    z-index: 999;
     background-color: transparent;
     border-color: transparent;
-    position: absolute;
+    position: fixed;
     top: $base*8;
     left: $base*14;
     width: $base*7;
@@ -429,6 +502,22 @@ footer {
 body.in-view {
     animation: fadeIn;
     animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+    backface-visibility: hidden;
+}
+
+.menu.in-view {
+    animation: fadeInDown;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+    backface-visibility: hidden;
+}
+
+.nav.in-view {
+    animation: fadeInDown;
+    animation-duration: 1s;
     animation-delay: 0s;
     animation-fill-mode: both;
     backface-visibility: hidden;

@@ -25,6 +25,6 @@ variables
 - [x] footer link hover background highlight
 - [x] page icon
 - [x] page loading animation
-- menu
+- [x] menu
 - mobile
 - display actual projects

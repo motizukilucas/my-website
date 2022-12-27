@@ -1,6 +1,18 @@
 $(document).ready(function(){
     $('body').addClass('in-view');
 
+    $('.menu').on('click', function(){
+        $(this).addClass('d-none');
+        $('.nav').removeClass('d-none');
+        $('.nav').addClass('in-view');
+    });
+    
+    $('#nav-close').on('click', function(){
+        $('.nav').addClass('d-none');
+        $('.menu').removeClass('d-none');
+        $('.menu').addClass('in-view');
+    });
+
     $('button').on('click', function(){
        $('button').removeClass('active');
        $('li').removeClass('active');

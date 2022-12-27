@@ -52,6 +52,67 @@ ul {
   list-style: none; /* Remove default bullets */
 }
 
+.nav {
+  font-weight: 300 !important;
+  z-index: 999;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  margin: 32px 0 0 64px;
+  padding: 24px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #000;
+}
+.nav button {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  width: fit-content;
+  position: relative;
+  left: -8px;
+  top: -32px;
+  height: 48px;
+  width: 48px;
+  margin-bottom: 8px;
+}
+.nav button:after {
+  content: "";
+  height: 48px;
+  border-left: 2px solid #FFF;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 28px;
+}
+.nav button:before {
+  content: "";
+  height: 48px;
+  border-left: 2px solid #FFF;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 28px;
+}
+.nav h2 {
+  font-weight: 300 !important;
+  color: #FFF;
+}
+.nav ul {
+  padding-left: 0;
+}
+.nav .nav-menu li {
+  margin-bottom: 8px;
+}
+.nav .nav-menu li a {
+  padding: 8px;
+}
+.nav .nav-socials li {
+  display: inline-block;
+  margin: 8px;
+}
+.nav .nav-socials li a {
+  padding: 8px;
+}
+
 .bg-purple {
   position: absolute;
   top: 0;
@@ -72,9 +133,10 @@ ul {
 }
 
 .menu {
+  z-index: 999;
   background-color: transparent;
   border-color: transparent;
-  position: absolute;
+  position: fixed;
   top: 64px;
   left: 112px;
   width: 56px;
@@ -433,6 +495,22 @@ footer .quotes {
 body.in-view {
   animation: fadeIn;
   animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+
+.menu.in-view {
+  animation: fadeInDown;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+
+.nav.in-view {
+  animation: fadeInDown;
+  animation-duration: 1s;
   animation-delay: 0s;
   animation-fill-mode: both;
   backface-visibility: hidden;
