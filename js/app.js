@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $('body').addClass('in-view');
+
     $('button').on('click', function(){
        $('button').removeClass('active');
        $('li').removeClass('active');

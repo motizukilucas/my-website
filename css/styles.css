@@ -431,4 +431,12 @@ footer .quotes {
   backface-visibility: hidden;
 }
 
+body.in-view {
+  animation: fadeIn;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+
 /*# sourceMappingURL=styles.css.map */

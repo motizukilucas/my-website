@@ -23,8 +23,8 @@ variables
 - [x] experiences animation clean up
 - [x] exp element background highlight
 - [x] footer link hover background highlight
-- page icon
-- page loading animation
+- [x] page icon
+- [x] page loading animation
 - menu
 - mobile
 - display actual projects
