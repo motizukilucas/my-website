@@ -295,7 +295,17 @@ footer .socials {
 }
 footer .socials a {
   color: #4CC9F0 !important;
-  margin-right: 8px;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+}
+footer .socials a i {
+  margin: auto;
+}
+footer .socials a:hover {
+  background-color: rgba(204, 197, 185, 0.1);
+  text-decoration: none !important;
 }
 footer .quotes {
   position: absolute;

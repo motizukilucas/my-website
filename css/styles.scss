@@ -359,7 +359,19 @@ footer {
 
         a {
             color: $blue !important;
-            margin-right: $base;
+            width: $base*6;
+            height: $base*6;
+            display: inline-flex;
+            justify-content: center;
+
+            i {
+                margin: auto;
+            }
+        }
+
+        a:hover {
+            background-color: rgba($color: $grey, $alpha: 0.1);
+            text-decoration: none !important;
         }
     }
 

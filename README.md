@@ -22,7 +22,8 @@ variables
 - [x] link underline hover
 - [x] experiences animation clean up
 - [x] exp element background highlight
-- footer link hover background highlight
+- [x] footer link hover background highlight
+- page icon
 - page loading animation
 - menu
 - mobile
