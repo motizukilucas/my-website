@@ -21,9 +21,9 @@ variables
 - [x] button hover
 - [x] link underline hover
 - [x] experiences animation clean up
-- exp element background highlight
-- page loading animation
+- [x] exp element background highlight
 - footer link hover background highlight
+- page loading animation
 - menu
 - mobile
 - display actual projects

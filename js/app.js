@@ -1,7 +1,10 @@
 $(document).ready(function(){
     $('button').on('click', function(){
        $('button').removeClass('active');
+       $('li').removeClass('active');
        $(this).addClass('active');
+       $(this).addClass('active');
+       $(this).parent().addClass('active');
     });
 
     $('#exp-ab').on('click', function() {

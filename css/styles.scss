@@ -198,7 +198,7 @@ ul {
         background-color: transparent;
         box-shadow: none;
         cursor: pointer;
-        padding: $base 0 $base $base*2;
+        padding: $base $base*2 $base $base*2;
         border-left: 1px solid $grey;
         color: $grey;
     }
@@ -206,6 +206,9 @@ ul {
     .active {
         border-left: 1px solid $pink;
         color: $pink;
+    }
+    li.active {
+        background-color: rgba($color: $grey, $alpha: 0.1);
     }
 
     button:focus {

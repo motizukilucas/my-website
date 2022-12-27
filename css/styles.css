@@ -160,13 +160,16 @@ ul {
   background-color: transparent;
   box-shadow: none;
   cursor: pointer;
-  padding: 8px 0 8px 16px;
+  padding: 8px 16px 8px 16px;
   border-left: 1px solid #CCC5B9;
   color: #CCC5B9;
 }
 .experiences .active {
   border-left: 1px solid #F72585;
   color: #F72585;
+}
+.experiences li.active {
+  background-color: rgba(204, 197, 185, 0.1);
 }
 .experiences button:focus {
   border-left: 1px solid #F72585;
