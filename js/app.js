@@ -7,18 +7,22 @@ $(document).ready(function(){
     $('#exp-ab').on('click', function() {
         $('.exp').addClass('d-none');
         $('.exp-ab').removeClass('d-none');
+        $('.exp-ab').addClass('in-view');
     });
     $('#exp-ez').on('click', function() {
         $('.exp').addClass('d-none');
         $('.exp-ez').removeClass('d-none');
+        $('.exp-ez').addClass('in-view');
     });
     $('#exp-bi').on('click', function() {
         $('.exp').addClass('d-none');
         $('.exp-bi').removeClass('d-none');
+        $('.exp-bi').addClass('in-view');
     });
     $('#exp-il').on('click', function() {
         $('.exp').addClass('d-none');
         $('.exp-il').removeClass('d-none');
+        $('.exp-il').addClass('in-view');
     });
 
     var $animationElements = $('.animation-element');

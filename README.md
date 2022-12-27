@@ -20,8 +20,10 @@ variables
 - [x] fade animation
 - [x] button hover
 - [x] link underline hover
-- experiences animation clean up
+- [x] experiences animation clean up
+- exp element background highlight
 - page loading animation
+- footer link hover background highlight
 - menu
 - mobile
 - display actual projects
