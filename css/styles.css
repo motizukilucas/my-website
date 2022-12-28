@@ -530,11 +530,16 @@ body.in-view {
   bottom: 48px;
   right: 64px;
   z-index: 999;
+  animation: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
 }
 
 .up {
-  transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg) !important;
+    -webkit-transform: rotate(-135deg) !important;
 }
 
 @media screen and (max-width: 576px) {
