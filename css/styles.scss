@@ -532,10 +532,10 @@ body.in-view {
 
 @media screen and (max-width: $sm) {
     .nav {
-        height: 60%;
+        height: 90%;
         width: 90%;
         justify-content: center;
-        margin: $base*2 0 0 $base*2;
+        margin: $base;
 
         .nav-menu {
             li {
@@ -554,7 +554,7 @@ body.in-view {
     }
 
     h1 {
-        font-size: $base*6 !important;
+        font-size: $base*5 !important;
     }
 
     .menu {
@@ -604,6 +604,10 @@ body.in-view {
     .projects {
         .project {
             margin-top: $base*2;
+
+            img {
+                max-width: $base*32;
+            }
         }   
     }
 
