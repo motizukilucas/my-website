@@ -539,7 +539,7 @@ body.in-view {
 
 .up {
   transform: rotate(-135deg) !important;
-    -webkit-transform: rotate(-135deg) !important;
+  -webkit-transform: rotate(-135deg) !important;
 }
 
 @media screen and (max-width: 576px) {
