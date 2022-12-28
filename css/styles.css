@@ -520,6 +520,23 @@ body.in-view {
   backface-visibility: hidden;
 }
 
+.arrow {
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 16px;
+  background-color: transparent;
+  position: fixed;
+  bottom: 48px;
+  right: 64px;
+  z-index: 999;
+}
+
+.up {
+  transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
 @media screen and (max-width: 576px) {
   .nav {
     height: 90%;
@@ -592,6 +609,10 @@ body.in-view {
   }
   footer .quotes {
     position: static;
+  }
+  .arrow {
+    bottom: 32px;
+    right: 48px;
   }
 }
 

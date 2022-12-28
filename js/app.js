@@ -77,6 +77,6 @@ $(document).ready(function(){
     var $menu = $('.menu');
     var $about = $('#about');
     
-    $window.on('scroll', function() { if (($menu.offset().top >= $about.offset().top)) { $menu.addClass('scrolled'); } else { $menu.removeClass('scrolled'); } }); 
+    $window.on('scroll', function() { if (($menu.offset().top >= $about.offset().top)) { $menu.addClass('scrolled'); $('.arrow').removeClass('d-none'); } else { $menu.removeClass('scrolled'); $('.arrow').addClass('d-none'); } }); 
 });
   
