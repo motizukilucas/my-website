@@ -554,12 +554,13 @@ body.in-view {
     }
 
     h1 {
-        font-size: $base*5 !important;
+        font-size: $base*4 !important;
     }
 
     .menu {
         top: $base*4;
         left: $base*4;
+        width: $base*8;
     }
 
     .hero {
@@ -612,7 +613,7 @@ body.in-view {
     }
 
     .contact {
-        margin-top: $base*8;
+        margin-top: $base*6;
     }
 
     footer {
