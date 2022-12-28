@@ -13,6 +13,12 @@ $(document).ready(function(){
         $('.menu').addClass('in-view');
     });
 
+    $('.nav-link').on('click', function(){
+        $('.nav').addClass('d-none');
+        $('.menu').removeClass('d-none');
+        $('.menu').addClass('in-view');
+    });
+
     $('button').on('click', function(){
        $('button').removeClass('active');
        $('li').removeClass('active');
