@@ -609,7 +609,11 @@ body.in-view {
             img {
                 max-width: $base*19;
             }
-        }   
+        }
+
+        .project-wrapper {
+            margin-top: $base*4;
+        }
     }
 
     .contact {

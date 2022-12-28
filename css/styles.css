@@ -581,6 +581,9 @@ body.in-view {
   .projects .project img {
     max-width: 152px;
   }
+  .projects .project-wrapper {
+    margin-top: 32px;
+  }
   .contact {
     margin-top: 48px;
   }
