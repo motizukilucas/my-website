@@ -535,7 +535,7 @@ body.in-view {
     justify-content: center;
   }
   .nav .nav-socials li {
-    margin: 16px 32px 0 32px;
+    margin: 16px 16px 0 16px;
   }
   h1 {
     font-size: 40px !important;
@@ -578,7 +578,7 @@ body.in-view {
     margin-top: 16px;
   }
   .projects .project img {
-    max-width: 256px;
+    max-width: 152px;
   }
   .contact {
     margin-top: 64px;
