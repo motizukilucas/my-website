@@ -26,6 +26,6 @@ variables
 - [x] page icon
 - [x] page loading animation
 - [x] menu
-- menu button change color on scroll
-- mobile
+- [x] menu button change color on scroll
+- [x] mobile
 - display actual projects

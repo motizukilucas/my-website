@@ -7,6 +7,7 @@ $grey: #CCC5B9;
 
 $base: 8px;
 
+$sm: 576px;
 $md: 768px;
 $xl: 1920px;
 $xxl: 2000px;
@@ -80,7 +81,7 @@ ul {
     flex-direction: column;
     margin: $base*4 0 0 $base*8;
     padding: $base*3;
-    background-color: rgba($color: $black, $alpha: 0.1);
+    background-color: rgba($color: $black, $alpha: 0.6);
     border: 1px solid $black;
 
     button {
@@ -527,4 +528,94 @@ body.in-view {
     animation-delay: 0s;
     animation-fill-mode: both;
     backface-visibility: hidden;
+}
+
+@media screen and (max-width: $sm) {
+    .nav {
+        height: 60%;
+        width: 90%;
+        justify-content: center;
+        margin: $base*2 0 0 $base*2;
+
+        .nav-menu {
+            li {
+                margin-bottom: $base*4;
+            }
+        }
+    
+        .nav-socials {
+            display: flex;
+            justify-content: center;
+
+            li {
+                margin: $base*2 $base*4 0 $base*4;
+            }
+        }
+    }
+
+    h1 {
+        font-size: $base*6 !important;
+    }
+
+    .menu {
+        top: $base*4;
+        left: $base*4;
+    }
+
+    .hero {
+        padding-top: $base*10;
+
+        .hero-img-wrapper {
+            margin-top: $base*6 !important;
+            margin-left: auto !important;
+        }
+    }
+
+    .container {
+        padding: 0 $base*4 0 $base*4;
+    }
+
+    .bg-purple {
+        width: 100%;
+        height: 115%;
+    }
+
+    .bg-blue {
+        display: none !important;
+    }
+
+    .d-flex {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .about {
+        margin-top: $base*20 !important;
+    }
+
+    .skills.d-flex {
+        flex-direction: row !important;
+    }
+
+    .experiences.m-auto {
+        margin-top: $base*8 !important;
+    }
+
+    .projects {
+        .project {
+            margin-top: $base*2;
+        }   
+    }
+
+    .contact {
+        margin-top: $base*8;
+    }
+
+    footer {
+        width: 90% !important;
+
+        .quotes {
+            position: static;
+        }
+    }
 }

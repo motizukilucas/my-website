@@ -60,7 +60,7 @@ ul {
   flex-direction: column;
   margin: 32px 0 0 64px;
   padding: 24px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.6);
   border: 1px solid #000;
 }
 .nav button {
@@ -518,6 +518,74 @@ body.in-view {
   animation-delay: 0s;
   animation-fill-mode: both;
   backface-visibility: hidden;
+}
+
+@media screen and (max-width: 576px) {
+  .nav {
+    height: 60%;
+    width: 90%;
+    justify-content: center;
+    margin: 16px 0 0 16px;
+  }
+  .nav .nav-menu li {
+    margin-bottom: 32px;
+  }
+  .nav .nav-socials {
+    display: flex;
+    justify-content: center;
+  }
+  .nav .nav-socials li {
+    margin: 16px 32px 0 32px;
+  }
+  h1 {
+    font-size: 48px !important;
+  }
+  .menu {
+    top: 32px;
+    left: 32px;
+  }
+  .hero {
+    padding-top: 80px;
+  }
+  .hero .hero-img-wrapper {
+    margin-top: 48px !important;
+    margin-left: auto !important;
+  }
+  .container {
+    padding: 0 32px 0 32px;
+  }
+  .bg-purple {
+    width: 100%;
+    height: 115%;
+  }
+  .bg-blue {
+    display: none !important;
+  }
+  .d-flex {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about {
+    margin-top: 160px !important;
+  }
+  .skills.d-flex {
+    flex-direction: row !important;
+  }
+  .experiences.m-auto {
+    margin-top: 64px !important;
+  }
+  .projects .project {
+    margin-top: 16px;
+  }
+  .contact {
+    margin-top: 64px;
+  }
+  footer {
+    width: 90% !important;
+  }
+  footer .quotes {
+    position: static;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
