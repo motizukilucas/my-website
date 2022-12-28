@@ -67,5 +67,10 @@ $(document).ready(function(){
 
     $window.on('scroll resize', checkIfInView);
     $window.trigger('scroll');
+
+    var $menu = $('.menu');
+    var $about = $('#about');
+    
+    $window.on('scroll', function() { if (($menu.offset().top >= $about.offset().top)) { $menu.addClass('scrolled'); } else { $menu.removeClass('scrolled'); } }); 
 });
   

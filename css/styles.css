@@ -149,6 +149,10 @@ ul {
   background-color: #FFF;
 }
 
+.menu.scrolled div {
+  background-color: #000 !important;
+}
+
 .hero {
   padding-top: 128px;
   position: relative;
