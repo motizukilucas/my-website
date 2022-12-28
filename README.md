@@ -28,4 +28,6 @@ variables
 - [x] menu
 - [x] menu button change color on scroll
 - [x] mobile
+- minify CSS and JS
+- [x] compress images
 - display actual projects
