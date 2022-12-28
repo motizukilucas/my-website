@@ -1,8 +1,10 @@
 # My Website
-## SASS
-mixins
-functions, if else, arrays for each
-variables
+## Commands
+Compile SCSS, minify css and js
+
+    sass --watch css/styles.scss css/styles.css
+    npx postcss css/styles.css > css/styles.min.css
+
 
 ## TODO
 - [x] content
@@ -28,6 +30,6 @@ variables
 - [x] menu
 - [x] menu button change color on scroll
 - [x] mobile
-- minify CSS and JS
+- [x] minify CSS and JS
 - [x] compress images
 - display actual projects
