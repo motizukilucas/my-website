@@ -60,7 +60,7 @@ ul {
   flex-direction: column;
   margin: 32px 0 0 64px;
   padding: 24px;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   border: 1px solid #000;
 }
 .nav button {
