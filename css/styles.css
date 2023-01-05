@@ -117,7 +117,7 @@ ul {
   position: absolute;
   top: 0;
   width: 70.5%;
-  height: 130%;
+  height: 135%;
   z-index: -998;
   background-color: #7209B7;
 }
@@ -618,6 +618,11 @@ body.in-view {
   .arrow {
     bottom: 32px;
     right: 48px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .project {
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
   }
 }
 

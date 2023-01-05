@@ -148,7 +148,7 @@ ul {
 .bg-purple {
     @include bg;
     width: 70.5%;
-    height: 130%;
+    height: 135%;
     z-index: -998;
     background-color: $purple;
 }
@@ -652,5 +652,11 @@ body.in-view {
     .arrow {
         bottom: $base*4;
         right: $base*6;
+    }
+}
+
+@media screen and (min-width: $xl) {
+    .project {
+        box-shadow: 4px 4px rgba($color: #000, $alpha: 0.1);
     }
 }
