@@ -551,7 +551,7 @@ body.in-view {
     margin: 8px;
   }
   .nav .nav-menu li {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
   .nav .nav-socials {
     display: flex;
