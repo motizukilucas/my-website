@@ -349,6 +349,7 @@ ul {
     }
 
     .project {
+        box-shadow: 4px 4px rgba($color: #000, $alpha: 0.1);
         background-color: $white;
         border: 1px solid $black;
         padding: $base*3;
@@ -569,7 +570,7 @@ body.in-view {
             justify-content: center;
 
             li {
-                margin: $base*2 $base*2 0 $base*2;
+                margin: $base*2 0 0 $base;
             }
         }
     }
@@ -652,11 +653,5 @@ body.in-view {
     .arrow {
         bottom: $base*4;
         right: $base*6;
-    }
-}
-
-@media screen and (min-width: $xl) {
-    .project {
-        box-shadow: 4px 4px rgba($color: #000, $alpha: 0.1);
     }
 }
