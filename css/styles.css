@@ -251,7 +251,7 @@ ul {
 }
 
 .projects {
-  background-color: #CCC5B9;
+  background-color: #4CC9F0;
   margin-top: 64px;
   padding-bottom: 64px;
 }
@@ -282,41 +282,54 @@ ul {
   color: #FFF !important;
 }
 .projects .button:hover a:hover {
-  background-color: #4CC9F0 !important;
+  background-color: #F72585 !important;
   color: #FFF !important;
-  border-color: #4CC9F0 !important;
+  border-color: #F72585 !important;
 }
-.projects .project-wrapper {
+.projects .projects-wrapper {
   margin: 64px 0 64px 0;
+  flex-wrap: wrap;
 }
 .projects .project {
   box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
-  background-color: #FFF;
-  border: 1px solid #000;
-  padding: 24px;
-  text-align: initial;
+  background-image: url("../img/pokemon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  margin-top: 8px;
+  width: 424px;
+  height: 304px;
+}
+.projects .project .project-content {
+  background-color: rgba(204, 197, 185, 0.9);
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.projects .project .project-content h2 {
+  color: #FFF;
+  font-size: 48px;
+}
+.projects .project .project-content p {
+  color: #FFF;
+}
+.projects .project .project-content .techs {
   position: relative;
-  margin: auto;
-  max-width: 424px;
-}
-.projects .project h2 {
-  color: #F72585;
-}
-.projects .project h2 i {
-  position: absolute;
-  right: 24px;
-}
-.projects .project p {
-  color: #000;
-}
-.projects .project img {
-  max-width: 320px;
-  display: block;
-  margin: auto;
-}
-.projects .project .techs {
-  color: #CCC5B9;
+  bottom: -48px;
+  right: 16px;
+  word-spacing: 8px;
+  color: #F72585 !important;
   text-align: right;
+}
+.projects .project:hover {
+  text-decoration: none !important;
+}
+.projects .project:hover .project-content {
+  background-color: rgba(114, 9, 183, 0.6);
 }
 
 .contact {
@@ -604,7 +617,7 @@ body.in-view {
   .projects .project img {
     max-width: 152px;
   }
-  .projects .project-wrapper {
+  .projects .projects-wrapper {
     margin-top: 32px;
   }
   .contact {
