@@ -161,6 +161,10 @@ ul {
 .hero .hero-content {
   margin-right: 0 !important;
 }
+.hero .hero-content .hello {
+  margin-bottom: 0;
+  color: #F72585;
+}
 .hero .hero-img-wrapper {
   margin-left: 64px !important;
   position: relative;
@@ -287,7 +291,7 @@ ul {
   border-color: #F72585 !important;
 }
 .projects .projects-wrapper {
-  margin: 64px 0 64px 0;
+  margin: 48px 0 64px 0;
   flex-wrap: wrap;
 }
 .projects .project {
