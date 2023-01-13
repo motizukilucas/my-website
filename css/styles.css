@@ -625,7 +625,7 @@ body.in-view {
     font-size: 12px;
   }
   .projects .project .project-content .techs {
-    bottom: -32px;
+    bottom: -16px;
   }
   .projects .projects-wrapper {
     margin-top: 32px;
