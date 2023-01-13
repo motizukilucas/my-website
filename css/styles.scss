@@ -640,14 +640,18 @@ body.in-view {
 
     .projects {
         .project {
-            width: $base*45;
-            height: $base*32;
+            width: 100%;
+            height: $base*24;
 
             .project-content {
                 background-color: rgba($color: $purple, $alpha: 0.6);
 
                 h2 {
-                    font-size: $base*4;
+                    font-size: $base*3;
+                }
+
+                p {
+                    font-size: $base*1.5;
                 }
 
                 .techs {
