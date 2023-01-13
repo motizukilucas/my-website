@@ -33,4 +33,5 @@ Compile SCSS, minify css and js
 - [x] minify CSS and JS
 - [x] compress images
 - [x] display actual projects
-- rework project section like bc mobile 
+- [x] rework project section
+- [x] fix projects mobile

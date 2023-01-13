@@ -612,10 +612,17 @@ body.in-view {
     margin-top: 64px !important;
   }
   .projects .project {
-    margin-top: 16px;
+    width: 360px;
+    height: 256px;
   }
-  .projects .project img {
-    max-width: 152px;
+  .projects .project .project-content {
+    background-color: rgba(114, 9, 183, 0.6);
+  }
+  .projects .project .project-content h2 {
+    font-size: 32px;
+  }
+  .projects .project .project-content .techs {
+    bottom: -32px;
   }
   .projects .projects-wrapper {
     margin-top: 32px;

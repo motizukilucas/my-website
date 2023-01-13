@@ -394,7 +394,7 @@ ul {
         text-decoration: none !important;
 
         .project-content {
-            background-color:  rgba($color: $purple, $alpha: 0.6);
+            background-color: rgba($color: $purple, $alpha: 0.6);
         }
     }
 }
@@ -640,10 +640,19 @@ body.in-view {
 
     .projects {
         .project {
-            margin-top: $base*2;
+            width: $base*45;
+            height: $base*32;
 
-            img {
-                max-width: $base*19;
+            .project-content {
+                background-color: rgba($color: $purple, $alpha: 0.6);
+
+                h2 {
+                    font-size: $base*4;
+                }
+
+                .techs {
+                    bottom: -($base*4);
+                }
             }
         }
 
