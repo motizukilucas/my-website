@@ -193,6 +193,11 @@ ul {
 
     .hero-content {
         margin-right: 0 !important;
+
+        .hello {
+            margin-bottom: 0;
+            color: $pink;
+        }
     }
     
     .hero-img-wrapper {
@@ -345,7 +350,7 @@ ul {
     }
 
     .projects-wrapper {
-        margin: $base*8 0 $base*8 0;
+        margin: $base*6 0 $base*8 0;
         flex-wrap: wrap;
     }
 
