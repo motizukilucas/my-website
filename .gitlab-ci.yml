@@ -22,9 +22,6 @@ build&deploy:
     - echo $SSH_PRIVATE_KEY | base64 -d > deploy.pem
     - chmod 400 deploy.pem
   script:
-    - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST "cd my-website && git pull"
-    - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST 'docker kill $(docker ps -aq) || true'
-    - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST 'docker rm $(docker ps -aq) || true'
-    - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST 'docker rmi $(docker images -aq) || true'
-    - ssh -o StrictHostKeyChecking=no -i deploy.pem ubuntu@$HOST 'cd my-website && docker-compose up --build -d'
+    - ssh -o StrictHostKeyChecking=no -i deploy.pem gitlab@$HOST "rm -rf /var/www/motizuki.me/*"
+    - scp -r -o StrictHostKeyChecking=no -i deploy.pem src/* gitlab@$HOST:/var/www/motizuki.me/
    
