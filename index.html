@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- START METADATA -->
+    <meta charset="utf-8"/>
+    <title>Lucas Motizuki | DevOps Engineer</title>
+    <meta name="description" content="Lucas Motizuki, devops engineer based in Portugal.">
+    <meta name="keyword" content="Lucas Motizuki, devops, software engineer, full stack, web developer, Rio de Janeiro, Brazil, Portugal.">
+    <meta name="author" content="Lucas Motizuki">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- END METADATA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.2.slim.min.js" integrity="sha256-E3P3OaTZH+HlEM7f1gdAT3lHAn4nWBZXuYe89DFg2d0=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b1a4800946.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+    <button class="menu">
+        <div class="scrolled" style="top: -8px;"></div>
+        <div style="top: 0;"></div>
+        <div style="top: 8px;"></div>
+    </button>
+    <div class="nav d-none">
+        <button id="nav-close"></button>
+        <ul class="nav-menu">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <h2>Socials</h2>
+        <ul class="nav-socials">
+            <li><a href="https://www.linkedin.com/in/motizukilucas/" class="nav-link" target="_blank">LN</a></li>
+            <li><a href="https://github.com/motizukilucas/" class="nav-link" target="_blank">GH</a></li>
+            <li><a href="https://www.youtube.com/@motizukilucas" class="nav-link" target="_blank">YT</a></li>
+        </ul>
+    </div>
+    <a href="#" class="d-none arrow up"></a>
+    <section class="hero">
+        <div class="container d-flex animation-element">
+            <div class="m-auto hero-content">
+                <p class="hello">Hello, my name is</p>
+                <h1>Lucas Motizuki.</h1>
+                <p>
+                    I'm a tech enthusiast, currently working as <mark>devops engineer</mark> for <a href="https://www.aubay.pt/" target="_blank">Aubay</a>.
+                    <br> From Rio de Janeiro, Brazil. Based in Coimbra, Portugal.
+                </p>
+            </div>
+            <div class="m-auto hero-img-wrapper">
+                <img class="hero-img" src="img/profile.png" />
+                <div class="hero-img-border"></div>
+            </div>
+        </div>
+        <div class="bg-purple"></div>
+        <div class="bg-blue"></div>
+    </section>
+    <section id="about" class="about">
+        <div class="container d-flex animation-element">
+            <div class="m-auto">
+                <h1># <span>About me</span></h1>
+                <p>
+                    I’ve been working with technology for more than five years now.<br>
+                    Collaborating with all kinds of companies, including a <a href="https://ezops.cloud/" target="_blank">start-up</a><br>
+                    and a <a href="https://www.ilumno.com" target="_blank">big corporation</a>.<br><br>
+                    From developing and designing to building infrastructures, I’ve done it all.<br> 
+                    Even though my focus has been in devops for the past two years,<br>
+                    I see myself as a genelarist who just loves to create.<br><br>
+                    Day to day tools:
+                </p>
+                <div class="skills d-flex">
+                    <ul class="m-auto">
+                        <li>AWS, Azure and OCI</li>
+                        <li>Gitlab-ci</li>
+                        <li>Terraform and Ansible</li>
+                        <li>Docker and Kubernetes</li>
+                    </ul>
+                    <ul class="m-auto">
+                        <li>Git</li>
+                        <li>Python and Bash</li>
+                        <li>SQL</li>
+                        <li>HTML, CSS and JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experiences m-auto">
+                <h1># <span>Experiences</span></h1>
+                <div class="d-flex">
+                    <ul>
+                        <li class="active"><button id="exp-ab" class="active">Aubay</button></li>
+                        <li><button id="exp-ez">EzOps.cloud</button></li>
+                        <li><button id="exp-bi">Bilo</button></li>
+                        <li><button id="exp-il">Ilumno</button></li>
+                    </ul>
+                    <div class="exp exp-ab">
+                        <h2>DevOps Engineer <a href="https://www.aubay.pt/" target="_blank">@Aubay</a></h2>
+                        <p class="exp-time">Sep 2022 &mdash; Present</p>
+                        <p class="exp-desc">
+                            Manage and create infra as code on public clouds, build and deploy multi-environment pipelines, on premises clusters, for a diverse array of internal projects.<br><br>
+                            Work with a variety of different languages, platforms, frameworks, and operational systems such as Gitlab-ci, Terraform, Ansible, Azure, OCI, Docker, Kubernetes, Bash, Python and JavaScript.<br><br>
+                            Communicate with multi-disciplinary teams of engineers, designers, stakeholders, and clients on a daily basis.
+                        </p>
+                    </div>
+                    <div class="exp exp-ez d-none">
+                        <h2>DevOps Engineer <a href="https://www.ezops.cloud/" target="_blank">@EzOps.cloud</a></h2>
+                        <p class="exp-time">Feb 2021 &mdash; Sep 2022</p>
+                        <p class="exp-desc">
+                            Automation of software development based on DevOps techniques, focused in public cloud, with the occasional on premises sysadmin role.<br><br>
+                            Responsible for gathering costumer needs, planning, building and managing the architeture. Daily contact with several worldwide clients.<br><br>
+                            Technologies used: Terraform, Cloudformation, Docker,  K8S. Python, Bash, PHP, JavaScript, AWS, Azure, GCP and OCI stacks.
+                        </p>
+                    </div>
+                    <div class="exp exp-bi d-none">
+                        <h2>Full Stack Developer <a href="#" target="_blank">@Bilo</a></h2>
+                        <p class="exp-time">Aug 2018 &mdash; Feb 2020</p>
+                        <p class="exp-desc">
+                            Highly adaptable to the needs of a start-up rapid expansion.<br><br>
+                            Designing and developing of web based applications. TDD driven development, creating an array of functional automated tests.<br><br>
+                            Work with different kinds of technologies, such as programming languages and frameworks, including Laravel, Rails, RSpec, PHPUnit, JavaScript, SCSS, HTML, Docker, AWS, and Agile methodologies. 
+                        </p>
+                    </div>
+                    <div class="exp  exp-il d-none">
+                        <h2>Software Engineer Intern <a href="https://www.ilumno.com" target="_blank">@Ilumno</a></h2>
+                        <p class="exp-time">Aug 2017 &mdash; Jul 2018</p>
+                        <p class="exp-desc">
+                            Present in more than 10 countries over Latin America.<br><br>
+                            Collaborated in a learning style research and web based application development, aimed at over 5 thousand students.<br><br>
+                            Direct in person support and feedback collection, communicating with international teachers, developers, students and stakeholders.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button m-auto">
+            <a href="https://motizuki.me/resume-lucas-motizuki.pdf" target="_blank">Resumé</a>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <div class="container text-center  animation-element">
+            <h1># <span>Projects</span></h1>
+            <p>Place holder for the awesome projects I'll share</p>
+            <div class="d-flex projects-wrapper">
+                <a class="project" href="https://github.com/motizukilucas/pokemon-showdown-bot" target="_blank">
+                    <div class="project-content">
+                        <h2>Pokémon Bot</h2>
+                        <p>An AI to play around at Pokémon Showdown</p>
+                        <p class="techs">machine-learning python docker</p>
+                    </div>
+                </a>
+                <a class="project" href="https://github.com/motizukilucas/pokemon-showdown-bot" target="_blank">
+                    <div class="project-content">
+                        <h2>Pokémon Bot</h2>
+                        <p>An AI to play around at Pokémon Showdown</p>
+                        <p class="techs">machine-learning python docker</p>
+                    </div>
+                </a>
+                <a class="project" href="https://github.com/motizukilucas/pokemon-showdown-bot" target="_blank">
+                    <div class="project-content">
+                        <h2>Pokémon Bot</h2>
+                        <p>An AI to play around at Pokémon Showdown</p>
+                        <p class="techs">machine-learning python docker</p>
+                    </div>
+                </a>
+            </div>
+            <div class="button m-auto">
+                <a href="#">More</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container text-center animation-element">
+            <h1># <span>Get in touch</span></h1>
+            <div class="m-auto" style="width: fit-content;">
+                <p style="text-align: left;">
+                    Although I'm not actively looking for new opportunities, I would still love to hear about any interesting idea.<br>
+                    Maybe we can collaborate on building something cool together in the future.
+                </p>
+            </div>
+            <div class="button m-auto">
+                <a href="mailto:lucas@motizuki.me" target="_blank">Say hi</a>
+            </div>
+        </div>
+    </section>
+    <footer class="container animation-element">
+        <div class="d-flex">
+            <p class="m-auto">Designed & built by Lucas Motizuki</p>
+            <div class="socials m-auto">
+                <a href="https://www.linkedin.com/in/motizukilucas/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/motizukilucas/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.youtube.com/@motizukilucas/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <p class="quotes ml-auto">
+            “Love people. Use things. The opposite never works.”<br><br>
+            &mdash; The Minimalists
+        </p>
+    </footer>
+    <script src="js/app.min.js"></script>
+</body>
+</html>
