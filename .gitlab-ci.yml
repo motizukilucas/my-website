@@ -18,10 +18,7 @@ build&deploy:
     - main
   stage: build&deploy
   before_script:
-    - echo $SSH_PRIVATE_KEY
-    - echo $SSH_PRIVATE_KEY | base64 -d > gitlab.pem
-    - chmod 400 gitlab.pem
+    - echo $SSH_PRIVATE_KEY | base64 -d > deploy.pem && chmod 400 deploy.pem
   script:
-    - ssh -o StrictHostKeyChecking=no -i gitlab.pem gitlab@$HOST "rm -rf /var/www/motizuki.me/*"
-    - scp -r -o StrictHostKeyChecking=no -i gitlab.pem src/* gitlab@$HOST:/var/www/motizuki.me/
-   
+    - ssh -o StrictHostKeyChecking=no -i deploy.pem deploy@$HOST "rm -rf /var/www/motizuki.me/*"
+    - scp -r -o StrictHostKeyChecking=no -i deploy.pem src/* deploy@$HOST:/var/www/motizuki.me/
