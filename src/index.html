@@ -49,7 +49,11 @@
                 </p>
             </div>
             <div class="m-auto hero-img-wrapper">
-                <img class="hero-img" src="img/profile.png" />
+                <picture>
+                    <source media="(max-width: 480px)" srcset="img/profile-P.png">
+                    <source media="(max-width: 800px)" srcset="img/profile-M.png">
+                    <img class="hero-img" src="img/profile.png" />
+                 </picture>                 
                 <div class="hero-img-border"></div>
             </div>
         </div>
