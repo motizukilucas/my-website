@@ -47,7 +47,11 @@ $(document).ready(function(){
         $('.exp-il').removeClass('d-none');
         $('.exp-il').addClass('in-view');
     });
-
+    $("#exp-uva").on("click", function() {
+        $(".exp").addClass("d-none");
+        $(".exp-uva").removeClass("d-none");
+        $(".exp-uva").addClass("in-view");
+    });
     var $animationElements = $('.animation-element');
     var $window = $(window);
 
