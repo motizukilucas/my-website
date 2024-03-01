@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- index page -->
     <url>
-        <loc>https://www.motizuki.me/</loc>
+        <loc>https://www.lucasmotizuki.com/</loc>
         <lastmod>2023-09-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <!-- profile picture -->
     <url>
-        <loc>https://www.motizuki.me/img/profile.png</loc>
+        <loc>https://www.lucasmotizuki.com/img/profile.png</loc>
         <lastmod>2023-08-28</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <!-- pdf resume -->
     <url>
-        <loc>https://www.motizuki.me/resume-lucas-motizuki.pdf</loc>
+        <loc>https://www.lucasmotizuki.com/resume-lucas-motizuki.pdf</loc>
         <lastmod>2023-03-05</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
