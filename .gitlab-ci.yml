@@ -20,6 +20,5 @@ build&deploy:
   before_script:
     - echo $SSH_PRIVATE_KEY | base64 -d > deploy.pem && chmod 400 deploy.pem
   script:
-    - cat src/index.html 
     - ssh -o StrictHostKeyChecking=no -i deploy.pem deploy@$HOST "rm -rf /var/www/lucasmotizuki.com/*"
     - scp -r -o StrictHostKeyChecking=no -i deploy.pem src/* deploy@$HOST:/var/www/lucasmotizuki.com/

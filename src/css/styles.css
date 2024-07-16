@@ -294,9 +294,17 @@ ul {
   margin: 48px 0 64px 0;
   flex-wrap: wrap;
 }
+.projects .pokemon {
+  background-image: url("../img/pokemon-P.png");
+}
+.projects .exchange {
+  background-image: url("../img/exchange-P.jpg");
+}
+.projects .website {
+  background-image: url("../img/website-P.jpg");
+}
 .projects .project {
   box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
-  background-image: url("../img/pokemon-P.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
