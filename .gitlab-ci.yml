@@ -1,5 +1,5 @@
 stages:
-  - build&deploy
+  - deploy
 
 # See https://github.com/docker-library/docker/pull/166
 services:
@@ -11,14 +11,16 @@ variables:
   DOCKER_DRIVER: overlay2
   DOCKER_TLS_CERTDIR: ""
 
-build&deploy:
+deploy:
   image: 
     name: docker:latest
   only: 
     - main
-  stage: build&deploy
+  stage: deploy
   before_script:
     - echo $SSH_PRIVATE_KEY | base64 -d > deploy.pem && chmod 400 deploy.pem
   script:
     - ssh -o StrictHostKeyChecking=no -i deploy.pem deploy@$HOST "rm -rf /var/www/lucasmotizuki.com/*"
     - scp -r -o StrictHostKeyChecking=no -i deploy.pem src/* deploy@$HOST:/var/www/lucasmotizuki.com/
+  after_script:
+    - ls -lah 
