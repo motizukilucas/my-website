@@ -23,4 +23,4 @@ deploy:
     - ssh -o StrictHostKeyChecking=no -i deploy.pem deploy@$HOST "rm -rf /var/www/lucasmotizuki.com/*"
     - scp -r -o StrictHostKeyChecking=no -i deploy.pem src/* deploy@$HOST:/var/www/lucasmotizuki.com/
   after_script:
-    - ls -lah 
+    - rm deploy.pem
