@@ -1,19 +1,9 @@
 stages:
   - deploy
 
-# See https://github.com/docker-library/docker/pull/166
-services:
-  - name: docker:dind
-    entrypoint: ["env", "-u", "DOCKER_HOST"]
-    command: ["dockerd-entrypoint.sh"]
-variables:
-  DOCKER_HOST: tcp://docker:2375/
-  DOCKER_DRIVER: overlay2
-  DOCKER_TLS_CERTDIR: ""
-
 deploy:
   image: 
-    name: docker:latest
+    name: chainguard/gitlab-shell:latest
   only: 
     - main
   stage: deploy
