@@ -3,11 +3,12 @@ stages:
 
 deploy:
   image: 
-    name: alpine
+    name: debian:trixie-slim
   only: 
     - main
   stage: deploy
   before_script:
+    - apt-get update -y && apt-get install -y ssh
     - echo $SSH_PRIVATE_KEY | base64 -d > deploy.pem && chmod 400 deploy.pem
   script:
     - ssh -o StrictHostKeyChecking=no -i deploy.pem deploy@$HOST "rm -rf /var/www/lucasmotizuki.com/*"
