@@ -3,7 +3,7 @@ stages:
 
 deploy:
   image: 
-    name: rapidfort/gitlab-shell-ib
+    name: alpine
   only: 
     - main
   stage: deploy
