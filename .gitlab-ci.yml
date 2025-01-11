@@ -3,7 +3,7 @@ stages:
 
 deploy:
   image: 
-    name: bitnami/os-shell:latest
+    name: rapidfort/gitlab-shell-ib
   only: 
     - main
   stage: deploy
