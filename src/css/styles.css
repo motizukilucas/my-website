@@ -52,6 +52,22 @@ ul {
   list-style: none; /* Remove default bullets */
 }
 
+.w-fit-content {
+  width: fit-content !important;
+}
+
+.top-0 {
+  top: 0 !important;
+}
+
+.top-8 {
+  top: 8px !important;
+}
+
+.top--8 {
+  top: -8px !important;
+}
+
 .nav {
   font-weight: 300 !important;
   z-index: 999;
