@@ -1,0 +1,689 @@
+$black: #000;
+$white: #FFF;
+$pink: #F72585;
+$purple: #7209B7;
+$blue: #4CC9F0;
+$grey: #CCC5B9;
+
+$base: 8px;
+
+$sm: 576px;
+$md: 768px;
+$xl: 1920px;
+$xxl: 2000px;
+
+@mixin bg {
+    position: absolute;
+    top: 0;
+}
+
+@media screen and (min-width: $md) {
+    .experiences {
+        width: 640px !important;
+    }
+}
+
+@media screen and (min-width: $xl) {
+    .bg-purple {
+        width: 65.5% !important;
+    }
+}
+
+@media screen and (min-width: $xxl) {
+    .bg-purple {
+        width: 70.5% !important;
+    }
+}
+
+body {
+    font-family: 'Open Sans', 'Ubuntu', -apple-system, system-ui, sans-serif;
+}
+
+p {
+    font-size: $base*2;
+}
+
+h1 {
+    font-size: $base*8;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: $base*3;
+    font-weight: bold;
+}
+
+mark {
+    color: $white;
+    background-color: $pink;
+    font-weight: bold;
+}
+
+a, a:hover {
+    color: $pink !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+}
+
+.nav {
+    font-weight: 300 !important;
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    margin: $base*4 0 0 $base*8;
+    padding: $base*3;
+    background-color: rgba($color: $black, $alpha: 0.8);
+    border: 1px solid $black;
+
+    button {
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+        cursor: pointer;
+        width: fit-content;
+        position: relative;
+        left: -$base;
+        top: -$base*4;
+        height: $base*6;
+        width: $base*6;
+        margin-bottom: $base;
+    }
+
+    button:after {
+        content: '';
+        height: $base*6;
+        border-left: 2px solid $white;
+        position: absolute;
+        transform: rotate(45deg);
+        left: 28px;
+    }
+    
+    button:before {
+        content: '';
+        height: $base*6;
+        border-left: 2px solid $white;
+        position: absolute;
+        transform: rotate(-45deg);
+        left: 28px;
+    }
+
+    h2 {
+        font-weight: 300 !important;
+        color: $white;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    .nav-menu {
+        li {
+            margin-bottom: $base;
+            a {
+                padding: $base;
+            }
+        }
+    }
+
+    .nav-socials {
+        li {
+            display: inline-block;
+            margin: $base;
+            a {
+                padding: $base;
+            }
+        }
+    }
+}
+
+.bg-purple {
+    @include bg;
+    width: 70.5%;
+    height: 135%;
+    z-index: -998;
+    background-color: $purple;
+}
+
+.bg-blue {
+    @include bg;
+    right: 0;
+    width: 100%;
+    height: 120%;
+    z-index: -999;
+    background-color: $blue;
+}
+
+.menu {
+    z-index: 999;
+    background-color: transparent;
+    border-color: transparent;
+    position: fixed;
+    top: $base*8;
+    left: $base*14;
+    width: $base*7;
+    height: $base*4;
+
+    div {
+        position: relative;
+        width: 100%;
+        height: 1px;
+        background-color: $white;
+    }
+}
+
+.menu.scrolled {
+    div {
+        background-color: $black !important;
+    }
+}
+
+.hero {
+    padding-top: $base*16;
+    position: relative;
+    color: $white;
+
+    .hero-content {
+        margin-right: 0 !important;
+
+        .hello {
+            margin-bottom: 0;
+            color: $pink;
+        }
+    }
+    
+    .hero-img-wrapper {
+        margin-left: $base*8 !important;
+        position: relative;
+    }
+    
+    .hero-img {
+        max-width: $base*32;
+        box-shadow: $base $base rgba($color: #000, $alpha: 0.1);
+    }
+    
+    .hero-img-border {
+        border: 1px solid $white;
+        position: absolute;
+        top: $base*3;
+        left: $base*3;
+        height: 100%;
+        width: 100%;
+        z-index: -997;
+    }
+}
+
+.about {
+    margin-top: $base*32;
+
+    .m-auto {
+        margin-top: 0 !important;
+    }
+
+    h1 {
+        color: $purple;
+        text-align: center;
+
+        span {
+            text-decoration: underline;
+        }
+    }
+
+    .button {
+        width: fit-content;
+        background-color: transparent;
+        color: $pink;
+        margin-top: $base*6 !important;
+
+        a {
+            padding: $base*2;
+            border: 1px solid $pink;
+        }
+    }
+
+    .button:hover  {
+        background-color: $pink;
+        color: $white !important;
+        a:hover {
+            background-color: $pink !important;
+            color: $white !important;
+        }
+    }
+}
+
+.skills {    
+    ul li::before {
+        content: "\2606";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: $pink; /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1.15em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+}
+
+.experiences {
+    button {
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+        cursor: pointer;
+        padding: $base $base*2 $base $base*2;
+        border-left: 1px solid $grey;
+        color: $grey;
+    }
+
+    .active {
+        border-left: 1px solid $pink;
+        color: $pink;
+    }
+    li.active {
+        background-color: rgba($color: $grey, $alpha: 0.1);
+    }
+
+    button:focus {
+        border-left: 1px solid $pink;
+        color: $pink;
+    }
+
+    .exp {
+        margin-left: $base*3;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        .exp-time {
+            color: $grey;
+        }
+    }
+}
+
+.projects {
+    background-color: $blue;
+    margin-top: $base*8;
+    padding-bottom: $base*8;
+
+    h1 {
+        padding-top: $base*8;
+        margin-bottom: 0;
+        color: $white;
+
+        span {
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        color: $purple;
+    }
+
+    .button {
+        width: fit-content;
+        background-color: transparent;
+        color: $white;
+        margin-top: $base*6 !important;
+
+        a {
+            padding: $base*2;
+            border: 1px solid $white;
+            color: $white !important;
+        }
+    }
+
+    .button:hover  {
+        background-color: $blue;
+        color: $white !important;
+        a:hover {
+            background-color: $pink !important;
+            color: $white !important;
+            border-color: $pink !important;
+        }
+    }
+
+    .projects-wrapper {
+        margin: $base*6 0 $base*8 0;
+        flex-wrap: wrap;
+    }
+
+    .project {
+        box-shadow: 4px 4px rgba($color: #000, $alpha: 0.1);
+        background-image: url("../img/pokemon.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        // border: 1px solid $black;
+        margin: auto;
+        margin-top: $base;
+        width: $base*53;
+        height: $base*38;
+
+        .project-content {
+            background-color: rgba($color: $grey, $alpha: 0.9);
+            width: 100%;
+            height: 100%;
+            padding: $base*2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                color: $white;
+                font-size: $base*6;
+            }
+
+            p {
+                color: $white;
+            }
+
+            .techs {
+                position: relative;
+                bottom: -($base*6);
+                right: $base*2;
+                word-spacing: $base;
+                color: $pink !important;
+                text-align: right;
+            }
+        }
+    }
+
+    .project:hover {
+        text-decoration: none !important;
+
+        .project-content {
+            background-color: rgba($color: $purple, $alpha: 0.6);
+        }
+    }
+}
+
+.contact {
+    margin-top: $base*16;
+
+    h1 {
+        color: $purple;
+
+        span {
+            text-decoration: underline;
+        }
+    }
+
+    .button {
+        width: fit-content;
+        background-color: transparent;
+        color: $pink;
+        margin-top: $base*6 !important;
+
+        a {
+            padding: $base*2;
+            border: 1px solid $pink;
+        }
+    }
+
+    .button:hover  {
+        background-color: $pink;
+        color: $white !important;
+        a:hover {
+            background-color: $pink !important;
+            color: $white !important;
+            border-color: $pink !important;
+        }
+    }
+}
+
+footer {
+    margin-top: $base*11;
+    border-top: 1px solid $blue;
+    color: $blue;
+
+    .d-flex {
+        padding: $base*4 0 $base*2 0;
+    }
+
+    .socials {
+        font-size: $base*3;
+
+        a {
+            color: $blue !important;
+            width: $base*6;
+            height: $base*6;
+            display: inline-flex;
+            justify-content: center;
+
+            i {
+                margin: auto;
+            }
+        }
+
+        a:hover {
+            background-color: rgba($color: $grey, $alpha: 0.1);
+            text-decoration: none !important;
+        }
+    }
+
+    .quotes {
+        position: absolute;
+        right: $base*20;
+        color: $grey !important;
+        padding: $base*4 0 $base*8 0;
+    }
+}
+
+// fadeIn Animation
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; } }
+.fadeIn { animation-name: fadeIn; }
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translate3d(0, -100%, 0); }
+    to { opacity: 1; transform: none; } }
+.fadeInDown { animation-name: fadeInDown; }
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translate3d(0, 20px, 0); }
+    to { opacity: 1; transform: none; } }
+.fadeInUp { animation-name: fadeInUp; }
+@keyframes fadeInUpBig {
+    from { opacity: 0; transform: translate3d(0, 100px, 0); }
+    to { opacity: 1; transform: none; } }
+.fadeInUpBig { animation-name: fadeInUpBig; }
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translate3d(-30px, 0, 0)rotateZ(30deg); }
+    to { opacity: 1; transform: none; } }
+.fadeInLeft { animation-name: fadeInLeft; }
+@keyframes fadeInLeftBig {
+    from { opacity: 0; transform: translate3d(-100px, 0, 0); }
+    to { opacity: 1; transform: none; } }
+.fadeInLeftBig { animation-name: fadeInLeftBig; }
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translate3d(100%, 0, 0); }
+    to { opacity: 1; transform: none; } 
+}.fadeInRight { animation-name: fadeInRight; }
+
+.animation-element.in-view {  
+    animation: fadeInUp;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+    backface-visibility: hidden;
+}
+
+.exp.in-view {  
+    animation: fadeInRight;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+    backface-visibility: hidden;
+}
+
+body.in-view {
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+    backface-visibility: hidden;
+}
+
+.menu.in-view {
+    animation: fadeInDown;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+    backface-visibility: hidden;
+}
+
+.nav.in-view {
+    animation: fadeInDown;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+    backface-visibility: hidden;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: $base*2;
+    background-color: transparent;
+    position: fixed;
+    bottom: $base*6;
+    right: $base*8;
+    z-index: 999;
+    animation: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+    backface-visibility: hidden;
+}
+.up {
+    transform: rotate(-135deg) !important;
+    -webkit-transform: rotate(-135deg) !important;
+}
+
+@media screen and (max-width: $sm) {
+    .nav {
+        height: 90%;
+        width: 90%;
+        justify-content: center;
+        margin: $base;
+
+        .nav-menu {
+            li {
+                margin-bottom: $base*2;
+            }
+        }
+    
+        .nav-socials {
+            display: flex;
+            justify-content: center;
+
+            li {
+                margin: $base*2 0 0 $base;
+            }
+        }
+    }
+
+    h1 {
+        font-size: $base*4 !important;
+    }
+
+    .menu {
+        top: $base*4;
+        left: $base*4;
+        width: $base*8;
+    }
+
+    .hero {
+        padding-top: $base*10;
+
+        .hero-img-wrapper {
+            margin-top: $base*6 !important;
+            margin-left: auto !important;
+        }
+    }
+
+    .container {
+        padding: 0 $base*4 0 $base*4;
+    }
+
+    .bg-purple {
+        width: 100%;
+        height: 115%;
+    }
+
+    .bg-blue {
+        display: none !important;
+    }
+
+    .d-flex {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .about {
+        margin-top: $base*20 !important;
+    }
+
+    .skills.d-flex {
+        flex-direction: row !important;
+    }
+
+    .experiences.m-auto {
+        margin-top: $base*8 !important;
+    }
+
+    .projects {
+        .project {
+            width: 100%;
+            height: $base*24;
+
+            .project-content {
+                background-color: rgba($color: $purple, $alpha: 0.6);
+
+                h2 {
+                    font-size: $base*3;
+                }
+
+                p {
+                    font-size: $base*1.5;
+                }
+
+                .techs {
+                    bottom: -($base*2);
+                }
+            }
+        }
+
+        .projects-wrapper {
+            margin-top: $base*4;
+        }
+    }
+
+    .contact {
+        margin-top: $base*6;
+    }
+
+    footer {
+        width: 90% !important;
+
+        .quotes {
+            position: static;
+        }
+    }
+
+    .arrow {
+        bottom: $base*4;
+        right: $base*6;
+    }
+}
