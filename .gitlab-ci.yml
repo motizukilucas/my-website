@@ -8,5 +8,8 @@ deploy:
     - main
   stage: deploy
   script:
-    - echo "Deploying contents of src/ to S3 bucket: $S3_BUCKET_NAME"
+    - echo $AWS_DEFAULT_REGION
+    - aws --version
+    - aws sts get-caller-identity
+    - echo S3_BUCKET_NAME
     - aws s3 sync src/ s3://$S3_BUCKET_NAME/ --delete
