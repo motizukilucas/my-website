@@ -2,14 +2,9 @@ stages:
   - deploy
 
 deploy:
-  image: 
-    name: amazon/aws-cli:2.15.20
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
   only:
     - main
   stage: deploy
   script:
-    - echo $AWS_DEFAULT_REGION
-    - aws --version
-    - aws sts get-caller-identity
-    - echo S3_BUCKET_NAME
     - aws s3 sync src/ s3://$S3_BUCKET_NAME/ --delete
