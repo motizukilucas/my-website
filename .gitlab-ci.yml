@@ -1,12 +1,12 @@
 stages:
   - deploy
 
-deploy_to_s3:
+deploy:
   image: 
     name: amazon/aws-cli:2.15.20
   only:
     - main
   stage: deploy
   script:
-    - echo "Deploying contents of src/ to S3 bucket: $S3_BUCKET_NAME"
+    # - echo "Deploying contents of src/ to S3 bucket: $S3_BUCKET_NAME"
     - aws s3 sync src/ s3://$S3_BUCKET_NAME/ --delete
