@@ -1,17 +1,11 @@
 stages:
   - deploy
 
-deploy:
-  image: 
-    name: debian:trixie-slim
-  only: 
-    - main
+deploy_to_s3:
+  image: amazon/aws-cli:2.15.20
   stage: deploy
-  before_script:
-    - apt-get update -y && apt-get install -y ssh
-    - echo $SSH_PRIVATE_KEY | base64 -d > deploy.pem && chmod 400 deploy.pem
   script:
-    - ssh -o StrictHostKeyChecking=no -i deploy.pem deploy@$HOST "rm -rf /var/www/lucasmotizuki.com/*"
-    - scp -r -o StrictHostKeyChecking=no -i deploy.pem src/* deploy@$HOST:/var/www/lucasmotizuki.com/
-  after_script:
-    - rm deploy.pem
+    - echo "Deploying contents of src/ to S3 bucket: $S3_BUCKET_NAME"
+    - aws s3 sync src/ s3://$S3_BUCKET_NAME/ --delete
+  only:
+    - main
