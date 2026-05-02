@@ -171,6 +171,9 @@ ul {
     left: $base*14;
     width: $base*7;
     height: $base*4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     div {
         position: relative;

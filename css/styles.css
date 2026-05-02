@@ -141,6 +141,9 @@ ul {
   left: 112px;
   width: 56px;
   height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .menu div {
   position: relative;
