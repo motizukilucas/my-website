@@ -51,10 +51,13 @@
             </div>
             <div class="m-auto hero-img-wrapper">
                 <picture>
+                    <source media="(max-width: 480px)" srcset="img/profile-P.webp" type="image/webp">
                     <source media="(max-width: 480px)" srcset="img/profile-P.png">
+                    <source media="(max-width: 800px)" srcset="img/profile-M.webp" type="image/webp">
                     <source media="(max-width: 800px)" srcset="img/profile-M.png">
-                    <img class="hero-img" src="img/profile.png" alt="Profile picture of Lucas Motizuki" />
-                 </picture>                 
+                    <source srcset="img/profile.webp" type="image/webp">
+                    <img class="hero-img" src="img/profile.png" alt="Profile picture of Lucas Motizuki" fetchpriority="high" width="1003" height="1003" />
+                </picture>                 
                 <div class="hero-img-border"></div>
             </div>
         </div>
@@ -168,7 +171,7 @@
             <h1># <span>Projects</span></h1>
             <p>A showcase of some awesome projects</p>
             <div class="d-flex projects-wrapper">
-                <a class="project exchange" href="https://github.com/motizukilucas/exchangerate-api-cron" target="_blank"
+                <a class="project exchange lazy-bg" data-bg="exchange" data-bg-ext="jpg" href="https://github.com/motizukilucas/exchangerate-api-cron" target="_blank"
                 data-credit-name="Nick Chong"
                 data-credit-url="https://unsplash.com/@nick604"
                 data-source-name="Unsplash"
@@ -179,14 +182,14 @@
                         <p class="techs">python</p>
                     </div>
                 </a>
-                <a class="project pokemon" href="https://github.com/motizukilucas/pokemon-showdown-bot" target="_blank">
+                <a class="project pokemon lazy-bg" data-bg="pokemon" data-bg-ext="png" href="https://github.com/motizukilucas/pokemon-showdown-bot" target="_blank">
                     <div class="project-content">
                         <h2>Pokémon Bot</h2>
                         <p>An AI to play around at Pokémon Showdown</p>
                         <p class="techs">machine-learning python docker</p>
                     </div>
                 </a>
-                <a class="project website" href="https://github.com/motizukilucas/my-website" target="_blank"
+                <a class="project website lazy-bg" data-bg="website" data-bg-ext="jpg" href="https://github.com/motizukilucas/my-website" target="_blank"
                 data-credit-name="Elise Bouet"
                 data-credit-profile="https://unsplash.com/@elisebouet"
                 data-credit-platform="Unsplash"

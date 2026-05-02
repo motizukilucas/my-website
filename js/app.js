@@ -86,6 +86,46 @@ $(document).ready(function(){
     var $menu = $('.menu');
     var $about = $('#about');
     
-    $window.on('scroll', function() { if (($menu.offset().top >= $about.offset().top)) { $menu.addClass('scrolled'); $('.arrow').removeClass('d-none'); } else { $menu.removeClass('scrolled'); $('.arrow').addClass('d-none'); } }); 
+    $window.on('scroll', function() { if (($menu.offset().top >= $about.offset().top)) { $menu.addClass('scrolled'); $('.arrow').removeClass('d-none'); } else { $menu.removeClass('scrolled'); $('.arrow').addClass('d-none'); } });
 });
+
+(function () {
+    var webpSupported = false;
+    var probe = new Image();
+    probe.onload = probe.onerror = function () {
+        webpSupported = probe.height === 2;
+        lazyLoadBgs();
+    };
+    probe.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+
+    function resolveUrl(el) {
+        var name = el.getAttribute('data-bg');
+        var ext = el.getAttribute('data-bg-ext') || 'png';
+        var w = window.innerWidth;
+        var size = w <= 480 ? '-P' : w <= 800 ? '-M' : '';
+        var format = webpSupported ? 'webp' : ext;
+        return 'url("img/' + name + size + '.' + format + '")';
+    }
+
+    function lazyLoadBgs() {
+        var elements = document.querySelectorAll('.lazy-bg');
+        if (!elements.length) return;
+
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.style.backgroundImage = resolveUrl(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '150px' });
+            elements.forEach(function (el) { observer.observe(el); });
+        } else {
+            elements.forEach(function (el) {
+                el.style.backgroundImage = resolveUrl(el);
+            });
+        }
+    }
+}());
   
